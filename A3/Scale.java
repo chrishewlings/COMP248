@@ -1,12 +1,15 @@
 public class Scale
 {
+	//constants
+
+	final int OZ_PER_CUP = 8;
+	final double KG_PER_LB = 1/2.2;
+	final double LB_PER_KG = 2.2;
+
 	// instance variables
 
 	private double weight;
 	private String unit;
-	final int OZ_PER_CUP = 8;
-	final double KG_PER_LB = 1/2.2;
-	final double LB_PER_KG = 2.2;
 
 	//constructor methods
 
@@ -80,7 +83,7 @@ public class Scale
 	{
 		double baseIntake = waterIntake();
 		double additionalIntake = (12 * (minutesOfExercise / 30)) / OZ_PER_CUP ;
-		
+
 		return (baseIntake + additionalIntake);
 
 	}
