@@ -1,5 +1,13 @@
 public class A3Q3 
 {
+
+	// This program uses the Scale object found in Scale.java to represent the weight of different people
+	// in this example, i'm using jim, michaael, and stanley as the objects
+	// It constructs these objects then uses accessor methods to display their values
+	// as well as mutators to modify their values and representations, and uses the built in Boolean 
+	// comparison functions from the Scale class to compare the characteristics of different instances. 
+	
+
 	public static void main(String[] args)
 	{
 		// set up 3 objects of type Scale
