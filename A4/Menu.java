@@ -91,32 +91,31 @@ public class Menu
         String returnString = "";
         String itemString;
 
-        if( this.topMessage != null)
+        if( this.topMessage != null) // don't print top message if it's empty
             returnString = returnString.concat(this.topMessage + "\n");
 
         returnString = returnString.concat(this.topPrompt + "\n");
 
         for(int i = 0; i < this.options.length; i++) {
-            itemString = String.format("(%d) %s\n", (i + 1), this.options[i]);
+            itemString = String.format("\t(%d) %s\n", (i + 1), this.options[i]);
             returnString = returnString.concat(itemString);
         }
 
-        if( this.bottomMessage != null)
+        if( this.bottomMessage != null) // don't print bottom message if it's empty
             returnString = returnString.concat(this.bottomMessage + "\n");
 
         returnString = returnString.concat(literalPromptString + " ");
-        returnString = returnString.concat(this.bottomPrompt + "\n");
+        returnString = returnString.concat(this.bottomPrompt + " ");
 
         return returnString;
 
     }
 
-
-    public int readOptionNumber()
+    public int getOptionNumber() // prints the menu and returns the users choice
     {
         int userInput;
         do {
-            System.out.println(this.toString());
+            System.out.print(this.toString());
 
             Scanner input = new Scanner(System.in);
             userInput = input.nextInt();
